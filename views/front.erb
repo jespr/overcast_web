@@ -1,0 +1,10 @@
+<h1>Colors</h1>
+
+<% COLORS = %w{#7ba92e #cccccc #34eb88} %>
+
+
+<% COLORS.each do |color| %>
+  <div style="display: inline-block; width: 100px; height: 30px; background-color: <%= Overcast::Color.lighten(color, 0.3) %>;"><%= Overcast::Color.lighten(color, 0.3) %></div>
+  <div style="display: inline-block; width: 100px; height: 30px; background-color: <%= color %>;"><%= color %></div>
+  <div style="display: inline-block; width: 100px; height: 30px; background-color: <%= Overcast::Color.darken(color, 0.8) %>;"><%= Overcast::Color.darken(color, 0.8) %></div><br />
+<% end %>
